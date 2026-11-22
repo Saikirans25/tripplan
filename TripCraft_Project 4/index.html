@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d9f0f7">
+<title>TripCraft — Your world, beautifully planned</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-bg"></div>
+<div class="grain"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">⌁</span><span>trip<span>craft</span></span></a>
+  <nav class="nav-links" id="navLinks">
+    <a class="active" href="#dashboard">Home</a><a href="#trips">My Trips</a><a href="#explore">Explore</a><a href="#mapPanel">Travel Map</a><a href="#experiences">Experiences</a>
+  </nav>
+  <div class="top-actions"><button class="icon-btn" aria-label="Notifications" id="notifyBtn">♧<i></i></button><button class="icon-btn settings-btn" aria-label="Settings" id="settingsBtn">⚙</button><a class="plan-btn" href="#planner">Plan a new trip <span>↗</span></a><button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button></div>
+</header>
+
+<main class="dashboard-shell" id="dashboard">
+  <section class="welcome-row reveal">
+    <div><div class="eyebrow"><span class="eyebrow-dot"></span> YOUR PERSONAL TRAVEL SPACE</div><h1>Your world, <em>beautifully planned.</em></h1><p>Every journey has a story. Here's where yours unfolds.</p></div>
+    <div class="welcome-date"><span class="date-icon">✧</span><div><small>YOUR NEXT ADVENTURE</small><strong id="welcomeNext">Paris · 26 July</strong></div></div>
+  </section>
+
+  <section class="dashboard-grid">
+    <article class="panel profile-card reveal">
+      <div class="profile-photo" role="img" aria-label="Traveler portrait"></div>
+      <div class="profile-overlay"></div>
+      <div class="profile-top"><span class="profile-tag"><span class="online-dot"></span> TRAVELER PROFILE</span><button class="glass-icon" id="profileEdit" aria-label="Edit profile">↗</button></div>
+      <div class="profile-bottom"><div class="profile-name">Your next chapter<span>✦</span></div><div class="profile-stats"><span><b id="miles">12,540</b><small>miles explored</small></span><span class="stat-divider"></span><span><b>08</b><small>places collected</small></span></div><div class="profile-progress"><span></span></div><small class="profile-foot">YOUR TRAVEL STORY IS 68% UNWRITTEN</small></div>
+      <div class="profile-shimmer"></div>
+    </article>
+
+    <article class="panel calendar-card reveal" id="trips">
+      <div class="panel-heading"><div><span class="heading-icon">▦</span><div><h2>Journey calendar</h2><p>Your plans, at a glance</p></div></div><button class="year-select" id="yearToggle">2026 <span>⌄</span></button></div>
+      <div class="calendar-controls"><button id="prevMonths" aria-label="Previous months">‹</button><span id="monthRange">May — October</span><button id="nextMonths" aria-label="Next months">›</button></div>
+      <div class="timeline" id="timeline">
+        <div class="timeline-months"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+        <div class="timeline-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <button class="trip-pill pill-vienna" data-trip="Vienna" data-detail="01–05 May · City break"><span class="trip-thumb thumb-vienna"></span><span><b>Vienna</b><small>01–05 May</small></span></button>
+        <button class="trip-pill pill-paris" data-trip="Paris" data-detail="26–28 July · Art & cafés"><span class="trip-thumb thumb-paris"></span><span><b>Paris, FR</b><small>26–28 Jul</small></span></button>
+        <button class="trip-pill pill-bali" data-trip="Bali" data-detail="03 Sep–31 Oct · Slow travel"><span class="trip-thumb thumb-bali"></span><span><b>Bali escape</b><small>03 Sep–31 Oct</small></span></button>
+        <div class="timeline-spark spark-a">✦</div><div class="timeline-spark spark-b">✧</div>
+      </div>
+      <div class="calendar-footer"><span><i class="legend-dot planned"></i> Planned journeys</span><span><i class="legend-dot saved"></i> Saved ideas</span><button id="viewCalendar">View calendar ↗</button></div>
+    </article>
+
+    <article class="panel next-trip-card reveal">
+      <div class="next-trip-image"><div class="image-glow"></div><div class="next-trip-top"><span class="status-chip"><i></i> COMING UP NEXT</span><button class="glass-icon" id="tripOptions" aria-label="Trip options">•••</button></div><div class="trip-destination"><small>YOUR NEXT DESTINATION</small><h2>Paris, <em>France.</em></h2><div class="trip-meta"><span>◷ 26 – 28 Jul</span><span>✦ 3 days</span><span>€864 est.</span></div></div></div>
+      <div class="next-trip-content"><div class="traveler-row"><div class="mini-avatars"><span>✦</span><span>◉</span></div><span>2 travelers</span><div class="tag-list"><span>Art & culture</span><span>Slow travel</span></div></div><div class="trip-info-grid"><div class="mini-map" aria-label="Stylized map preview"><svg viewBox="0 0 180 100"><path d="M-5 18 L30 7 51 20 75 14 89 36 110 28 130 42 174 33 M5 60 L40 45 59 63 82 53 103 74 137 63 184 80 M21 -4 L34 100 M66 -3 L72 103 M116 -3 L109 103 M150 -3 L155 103" fill="none" stroke="#b2c8c5" stroke-width="2"/><path d="M18 78 Q45 67 64 47 T120 26 T158 47" fill="none" stroke="#e8a8d9" stroke-width="3" stroke-dasharray="4 4"/><circle cx="64" cy="47" r="4" fill="#d58fc4"/><circle cx="158" cy="47" r="4" fill="#d58fc4"/></svg><span>3 stops saved</span></div><div class="stay-photo"><span class="stay-label">YOUR STAY</span><span class="stay-caption">A quiet Paris apartment<br><small>Le Marais · 2 nights</small></span></div></div><button class="trip-open" id="openTrip">Open trip details <span>↗</span></button></div>
+    </article>
+
+    <article class="panel previous-card reveal" id="explore">
+      <div class="panel-heading"><div><span class="heading-icon">◷</span><div><h2>Past & saved journeys</h2><p>Memories worth keeping</p></div></div><button class="text-action" id="seeAllTrips">See all ↗</button></div>
+      <div class="memory-stack" id="memoryStack">
+        <button class="memory-card memory-japan active" data-memory="Japan"><span class="memory-overline">A LITTLE WANDERLUST</span><span class="memory-title">Japan</span><span class="memory-date">12 — 19 Oct</span><span class="memory-tags"><i>Solo</i><i>Cultural</i><i>Roundtrip</i></span><span class="memory-arrow">↗</span></button>
+        <button class="memory-card memory-alps" data-memory="Swiss Alps"><span class="memory-overline">FRESH AIR CLUB</span><span class="memory-title">Swiss Alps</span><span class="memory-date">04 — 10 Jun</span><span class="memory-arrow">↗</span></button>
+        <button class="memory-card memory-coast" data-memory="Amalfi Coast"><span class="memory-overline">THE SLOW DAYS</span><span class="memory-title">Amalfi</span><span class="memory-date">18 — 23 Aug</span><span class="memory-arrow">↗</span></button>
+        <div class="stack-hint">CLICK A CARD TO EXPLORE <span>→</span></div>
+      </div>
+      <div class="memory-footer"><span><b>08</b> saved memories</span><button id="shuffleMemory">Shuffle memories ⤨</button></div>
+    </article>
+
+    <article class="panel map-panel reveal" id="mapPanel">
+      <div class="map-top"><div class="panel-heading"><div><span class="heading-icon">◎</span><div><h2>Your travel footprint</h2><p>A map of places you've dreamed of</p></div></div></div><button class="country-select" id="countryToggle">All places <span>⌄</span></button></div>
+      <div class="world-map">
+        <div class="map-wash"></div>
+        <svg class="map-art" viewBox="0 0 740 330" role="img" aria-label="Illustrated map showing visited and planned travel destinations">
+          <defs><pattern id="plannedPattern" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="12" fill="#d9f7a4"/><rect width="4" height="12" fill="#b6e56c"/></pattern></defs>
+          <g class="continent" fill="#eef3f1" stroke="#fff" stroke-width="2">
+            <path d="M55 80 L82 55 120 48 148 62 175 49 208 67 221 93 203 111 185 119 169 145 144 147 131 169 107 156 95 127 72 115Z"/>
+            <path d="M164 160 L187 157 206 177 201 204 188 228 177 260 162 284 151 259 154 225 143 203Z"/>
+            <path d="M298 61 L322 47 350 51 370 39 394 50 420 43 443 60 463 57 489 76 515 77 535 98 524 117 495 113 482 128 455 126 438 143 414 134 396 151 375 142 356 122 333 116 319 93Z"/>
+            <path d="M365 143 L389 138 405 157 413 182 399 208 387 238 371 254 360 229 354 204 342 181 346 160Z"/>
+            <path d="M476 128 L510 120 543 130 568 145 598 150 614 169 641 177 656 197 636 209 612 193 587 204 568 187 548 193 529 173 506 175 489 157Z"/>
+            <path d="M580 224 L605 220 631 234 648 256 636 272 613 265 599 247Z"/>
+            <path d="M250 35 L269 23 287 34 282 52 263 56Z"/>
+          </g>
+          <g class="map-planned"><path d="M335 84 L359 67 382 76 394 92 381 107 362 111 349 101Z" fill="url(#plannedPattern)" stroke="#fff" stroke-width="2"/><path d="M346 115 L367 110 381 127 376 147 360 156 350 139Z" fill="url(#plannedPattern)" stroke="#fff" stroke-width="2"/></g>
+          <g class="map-visited" fill="#f4b9e5" stroke="#fff" stroke-width="2"><path d="M333 122 L352 118 362 130 354 143 337 140Z"/><path d="M361 139 L377 134 390 146 386 160 371 164 361 153Z"/><path d="M390 154 L411 147 424 160 415 175 399 176Z"/><path d="M425 164 L443 157 457 169 449 182 433 181Z"/></g>
+          <g class="map-routes"><path d="M347 126 Q384 87 405 156 T454 171" fill="none" stroke="#7c9d89" stroke-width="2.5" stroke-dasharray="5 6"/><circle cx="347" cy="126" r="5" fill="#7b9c83"/><circle cx="405" cy="156" r="5" fill="#d58fc4"/><circle cx="454" cy="171" r="5" fill="#d58fc4"/></g>
+          <g class="map-labels"><text x="322" y="113">Paris</text><text x="414" y="146">Milan</text><text x="460" y="190">Bali</text><text x="112" y="112">New York</text><text x="380" y="67">Vienna</text></g>
+        </svg>
+        <div class="map-stat stat-days"><strong id="travelDays">58</strong><span>travel days</span></div><div class="map-stat stat-countries"><strong id="countriesCount">04</strong><span>countries visited</span></div><div class="map-stat stat-trips"><strong id="tripsCount">07</strong><span>trips planned</span></div>
+        <div class="map-zoom"><button id="zoomIn" aria-label="Zoom in">+</button><button id="zoomOut" aria-label="Zoom out">−</button></div>
+        <div class="map-legend"><span><i class="legend-dot planned"></i> Planned</span><span><i class="legend-dot visited"></i> Visited</span><span><i class="legend-dot notvisited"></i> Wishlist</span></div>
+      </div>
+    </article>
+  </section>
+
+  
+<section class="story-section" id="trip-stories">
+  <div class="story-backdrop"></div>
+  <div class="story-intro reveal"><div class="eyebrow"><span class="eyebrow-dot"></span> THE WORLD IS WIDE OPEN</div><h2>Some places stay<br>with you <em>forever.</em></h2><p>Little moments become the stories you tell for years.</p><a href="#explore" class="story-link">Wander through the collection <span>↓</span></a></div>
+  <div class="story-photo story-photo-one reveal"><div class="story-photo-image photo-coast"></div><div class="story-photo-caption"><span>01 / THE BLUE HOUR</span><strong>Chase the coastline.</strong><small>Amalfi Coast, Italy</small></div></div>
+  <div class="story-photo story-photo-two reveal"><div class="story-photo-image photo-mountain"></div><div class="story-photo-caption"><span>02 / ABOVE THE CLOUDS</span><strong>Find your quiet.</strong><small>Swiss Alps</small></div></div>
+  <div class="story-orbit orbit-one"></div><div class="story-orbit orbit-two"></div>
+  <div class="story-side-note">COLLECT MOMENTS, NOT MILES <span>✦</span></div>
+</section>
+
+<section class="destination-experience" id="destinations">
+  <div class="destination-experience-head reveal"><div><div class="eyebrow">A FEW PLACES TO FALL FOR</div><h2>Follow your <em>curiosity.</em></h2></div><p>From slow mornings by the sea to mountain air that clears your head, find the place that matches your mood.</p></div>
+  <div class="destination-feature-grid">
+    <button class="feature-destination feature-bali reveal" data-feature-place="Bali, Indonesia"><span class="feature-number">01</span><span class="feature-meta">ISLAND TIME · INDONESIA</span><span class="feature-title">Take the<br><em>slow road.</em></span><span class="feature-bottom"><span>Explore Bali</span><b>↗</b></span></button>
+    <button class="feature-destination feature-kyoto reveal" data-feature-place="Kyoto, Japan"><span class="feature-number">02</span><span class="feature-meta">RITUALS & CULTURE · JAPAN</span><span class="feature-title">Find beauty<br>in the <em>details.</em></span><span class="feature-bottom"><span>Explore Kyoto</span><b>↗</b></span></button>
+    <button class="feature-destination feature-swiss reveal" data-feature-place="Swiss Alps"><span class="feature-number">03</span><span class="feature-meta">FRESH AIR · SWITZERLAND</span><span class="feature-title">Go where<br>the air <em>changes.</em></span><span class="feature-bottom"><span>Explore the Alps</span><b>↗</b></span></button>
+  </div>
+</section>
+
+<section class="scroll-quote-section" id="travel-philosophy">
+  <div class="quote-image-layer"></div><div class="quote-vignette"></div>
+  <div class="quote-content reveal"><span class="quote-mark">“</span><p>The best journeys don't just take you to new places. They make you see the familiar world differently.</p><div class="quote-rule"></div><span class="quote-caption">A LITTLE REMINDER FROM TRIPCRAFT</span></div>
+  <div class="quote-scroll-number">03 <span>/ 06</span></div>
+</section>
+
+<section class="experience-section" id="experiences">
+  <div class="experience-header reveal"><div><div class="eyebrow">MAKE IT YOUR KIND OF ADVENTURE</div><h2>Travel by <em>feeling.</em></h2></div><p>Not every trip needs a checklist. Start with the feeling you want to bring home.</p></div>
+  <div class="experience-row reveal" data-experience="Slow mornings"><div class="experience-icon">☼</div><div class="experience-copy"><span>01 / TAKE YOUR TIME</span><h3>Slow mornings</h3><p>Long breakfasts, neighbourhood walks, and nowhere urgent to be.</p></div><div class="experience-image exp-slow"></div><span class="experience-arrow">↗</span></div>
+  <div class="experience-row reveal" data-experience="Local culture"><div class="experience-icon">⌂</div><div class="experience-copy"><span>02 / GET TO KNOW THE PLACE</span><h3>Local culture</h3><p>Small museums, family-run cafés, market streets, and stories from locals.</p></div><div class="experience-image exp-culture"></div><span class="experience-arrow">↗</span></div>
+  <div class="experience-row reveal" data-experience="Wild outdoors"><div class="experience-icon">⛰</div><div class="experience-copy"><span>03 / STEP OUTSIDE</span><h3>Wild outdoors</h3><p>Fresh air, winding trails, big views, and the lovely feeling of being small.</p></div><div class="experience-image exp-wild"></div><span class="experience-arrow">↗</span></div>
+  <div class="experience-row reveal" data-experience="Food discoveries"><div class="experience-icon">✳</div><div class="experience-copy"><span>04 / FOLLOW THE FLAVOUR</span><h3>Food discoveries</h3><p>Try the dish you can't pronounce, and remember the place by its taste.</p></div><div class="experience-image exp-food"></div><span class="experience-arrow">↗</span></div>
+</section>
+
+<section class="packing-section" id="travel-kit">
+  <div class="packing-photo reveal"><div class="packing-photo-overlay"></div><div class="packing-stamp">TRAVEL<br>LIGHT ✦</div><div class="packing-photo-bottom"><span>THE TRIPCRAFT EDIT</span><strong>Less stuff.<br>More stories.</strong></div></div>
+  <div class="packing-content reveal"><div class="eyebrow">A LITTLE PREP GOES A LONG WAY</div><h2>Ready for the<br><em>beautiful unknown?</em></h2><p>A few thoughtful essentials can make every new place feel easier to explore. Keep your plans flexible, your documents handy, and a little space for surprises.</p>
+    <div class="checklist" id="packingChecklist"><label><input type="checkbox"><span class="check-custom">✓</span><span><b>Travel documents</b><small>Passport, ID, tickets, and reservations</small></span></label><label><input type="checkbox"><span class="check-custom">✓</span><span><b>Everyday essentials</b><small>Medications, charger, and reusable bottle</small></span></label><label><input type="checkbox"><span class="check-custom">✓</span><span><b>Weather-ready layers</b><small>Comfortable shoes and one extra layer</small></span></label><label><input type="checkbox"><span class="check-custom">✓</span><span><b>Room for the unexpected</b><small>A little budget and time buffer</small></span></label></div>
+    <div class="packing-progress"><div><span>YOUR PACKING CHECKLIST</span><b id="packingCount">0 / 4 ready</b></div><span class="packing-progress-track"><i id="packingProgressFill"></i></span></div>
+  </div>
+</section>
+
+<section class="closing-story reveal" id="closingStory"><div class="closing-story-bg"></div><div class="closing-story-content"><div class="eyebrow">THERE'S A WHOLE WORLD OUT THERE</div><h2>Go make a story<br><em>worth telling.</em></h2><p>One destination. A thousand possibilities. Your next chapter starts here.</p><a class="closing-story-btn" href="#planner">Plan your next trip <span>↗</span></a></div><div class="closing-orbit"></div><div class="closing-bottom-note">YOUR NEXT GREAT STORY IS WAITING <span>✦</span></div></section>
+
+<section class="planner-section panel reveal" id="planner">
+    <div class="planner-copy"><div class="eyebrow">THE NEXT CHAPTER</div><h2>Somewhere new<br><em>is calling.</em></h2><p>Choose your destination, set your pace, and turn that little daydream into a real plan.</p></div>
+    <form id="quickPlanForm" class="quick-plan-form"><label for="destination">Where to next?</label><div class="quick-input"><span>⌖</span><input id="destination" placeholder="Try Kyoto, Lisbon, Bali..." required><button type="submit">Build my trip <span>↗</span></button></div><div class="quick-chips"><button type="button" data-place="Kyoto, Japan">✦ Kyoto</button><button type="button" data-place="Amalfi Coast, Italy">☼ Amalfi Coast</button><button type="button" data-place="Bali, Indonesia">⌁ Bali</button><button type="button" data-place="Swiss Alps">⛰ Swiss Alps</button></div><p class="form-hint" id="formHint">Your next trip starts with one place.</p></form>
+  </section>
+  <footer><a class="brand" href="#"><span class="brand-icon">⌁</span><span>trip<span>craft</span></span></a><span>COLLECT MOMENTS, NOT MILES.</span><span>Made for your next great story ✦</span></footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Your next story starts here ✦</div>
+<div class="modal-backdrop" id="modalBackdrop"><section class="modal"><button class="modal-close" id="modalClose">×</button><div class="eyebrow">TRIPCRAFT DETAILS</div><h2 id="modalTitle">Your trip</h2><p id="modalBody">Your travel details appear here.</p><button class="plan-btn" id="modalAction">Sounds good <span>↗</span></button></section></div>
+<script src="app.js"></script>
+</body>
+</html>
